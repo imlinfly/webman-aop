@@ -26,10 +26,8 @@ class AopAnnotationParser implements IAnnotationParser
      */
     public static function process(array $item): void
     {
-        switch ($item['annotation']) {
-            case Aspect::class:
-                self::setAspectRule($item);
-                break;
+        if ($item['annotation'] == Aspect::class) {
+            self::setAspectRule($item);
         }
     }
 
