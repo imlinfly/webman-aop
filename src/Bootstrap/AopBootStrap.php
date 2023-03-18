@@ -13,7 +13,6 @@ namespace LinFly\WebmanAop\Bootstrap;
 
 use LinFly\Annotation\Bootstrap\AnnotationBootstrap;
 use LinFly\Aop\FacadeAop;
-use LinFly\WebmanAop\Annotation\Parser\AopAnnotationParser;
 use Webman\Bootstrap;
 use Workerman\Worker;
 
@@ -24,7 +23,7 @@ class AopBootStrap implements Bootstrap
      * onWorkerStart
      *
      * @param Worker|null $worker
-     * @return mixed
+     * @return void
      */
     public static function start(?Worker $worker)
     {
